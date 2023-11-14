@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Registration Form</title>
+<script type = "text/javascript">
+ function display()
+ { n = document.getElementById("form1").length;
+ window.alert("This Form Contains "+ n + " Elements");
+ }
+</script>
+</head>
+<body >
+ <form id = "form1" method ="post" >
+ <input type = "text" value = "firstname" /><br><br>
+ <input type = "text" value = "Username" /><br><br>
+ <label for="cars">Choose a car:</label>
+<select name="cars" id="cars">
+ <option value="volvo">Volvo</option>
+ <option value="saab">Saab</option>
+ <option value="mercedes">Mercedes</option>
+ <option value="audi">Audi</option>
+</select>
+<br><br>
+<label for="cars">Choose gender:</label>
+ <input type = "radio" name = "gender"/>Male
+ <input type = "radio" name = "gender"/>Female
+<br><br>
+ <input type = "checkbox" /> I agree the terms and policy
+ <br><br>
+<input type = "button" value = "submit" onclick="display()"/>
+ </form>
+</body>
+</html>
+

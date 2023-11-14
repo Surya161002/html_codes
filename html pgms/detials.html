@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Registration Form</title>
+<script type = "text/javascript">
+ function validate()
+ {
+ if(document.myForm.fName.value == "")
+ {
+ alert("Please Provide Your First Name");
+ document.myForm.fName.focus();
+ return false;
+ }
+ if(document.myForm.lName.value == "")
+ {
+ alert("Please Provide Your Last Name");
+ document.myForm.lName.focus();
+ return false;
+ }
+ if(document.myForm.address.value == "")
+ {
+ alert("Please Provide Your Address");
+ document.myForm.address.focus();
+ return false;
+ }
+ if ((document.myForm.Zip.value == "")||(document.myForm.Zip.value.length != 6))
+ {
+ alert("Please Provide a valid zip code format ######");
+ document.myForm.Zip.focus();
+ return false;
+ }
+ if(document.myForm.Country.value == "")
+ {
+ alert("Please Provide Your Country Name");
+ return false;
+ }
+document.write("Thanks for the entry");
+ return true;
+ }
+ </script>
+</head>
+<body >
+ <form name = "myForm" onsubmit = "return(validate());" >
+ 
+ First Name:<br>
+ <input type = "text" name = "fName" /><br>
+ 
+ Last Name:<br>
+ <input type = "text" name = "lName" /><br>
+ Address : <br>
+<input type = "text" name = "address" /><br>
+ Zip Code:<br>
+ <td><input type = "text" name = "Zip" /><br>
+ 
+ Country:<br><br>
+ <td><input type = "text" name = "country" /><br>
+ <br>
+ 
+ <input type = "submit" value = "Submit" /><br>
+ 
+ </form>
+</body>
+</html>
+

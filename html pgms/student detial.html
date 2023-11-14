@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Registration Form</title>
+<script type = "text/javascript">
+ function calc()
+ {
+ var m1, m2, m3, avg = 0, total = 0, result = "", grade = "";
+ m1 = parseInt(document.form1.wp.value);
+ m2 = parseInt(document.form1.sp.value);
+ m3 = parseInt(document.form1.cg.value);
+ total = m1+m2+m3;
+ avg = total/3;
+ if( m1 < 35 || m2 < 35 || m3 < 35)
+ {
+ result = "fail";
+ grade = "D";
+ }
+ else if(avg >= 75)
+ {
+ result = "Distinction";
+ grade = "A+";
+ }
+ else if(avg >= 60 && avg < 75)
+ {
+ result = "First class";
+ grade = "A";
+ }
+ 
+ else if(avg >= 50 && avg < 60)
+ {
+ result = "Second class";
+ grade = "B";
+ }
+ else if(avg >=35 && avg < 50)
+ {
+ result = "Pass class";
+ grade = "C";
+ }
+ else if (avg < 35)
+ {
+ result = "Fail";
+ Grade = "D";
+ }
+ document.form1.result.value = result;
+ document.form1.grade.value = grade;
+ document.form1.total.value = total;
+ document.form1.average.value = avg;
+ }
+</script>
+</head>
+<body>
+ <form name = "form1">
+ Enter Student Name :
+ <input type = "text" /> <br> <br>
+ Enter Subject Marks : <br> <br>
+ Web Programming : 
+ <input type = "text" name = "wp" /> <br> <br>
+ Computer Graphics :
+ <input type = "text" name = "cg" /> <br> <br>
+ System Programming :
+ <input type = "text" name = "sp" /> <br> <br>
+ <input type = "button" onclick = "calc()" value = "calculte" /> <br> <br>
+ Total :
+ <input type = "text" name = "total"/> <br> <br>
+ Average :
+ <input type = "text" name = "average" /> <br> <br>
+ Result :
+ <input type = "text" name = "result" /> <br> <br>
+ Grade :
+ <input type = "text" name = "grade"/> <br>
+ </form>
+</body>
+</html>

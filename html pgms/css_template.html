@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+ box-sizing: border-box;
+}
+body {
+ font-family: Arial, Helvetica, sans-serif;
+}
+/* Style the header */
+header {
+ background-color:darkseagreen;
+ padding: 5px;
+ text-align: center;
+ font-size: 25px;
+ color: white;
+}
+nav {
+ float: left;
+ width: 30%;
+ height: 300px; 
+ background:coral;
+ font-size: 20px;
+ padding: 20px;
+}
+nav ul {
+ list-style-type: disc;
+ padding: 30px;
+}
+aside {
+ float: left;
+ padding: 20px;
+ width: 70%;
+ background-color: aqua;
+ height: 300px; 
+}
+footer {
+ background-color:blueviolet;
+ padding: 5px;
+ font-size: 20px;
+ text-align: center;
+ color: white;
+}
+}
+</style>
+<script type = "text/javascript">
+ function validate()
+ {
+ if(document.myForm.fname.value == "")
+ {
+ window.alert("Enter name");
+ return false;
+}
+else
+window.alert("Welcome");
+}
+</script>
+</head>
+<body>
+<h2>CSS Layout </h2>
+<header>
+ <h2>Header</h2>
+</header>
+<section>
+ <nav>
+ Nav Section with list
+ <ul>
+ <li><a href="#">Site1</a></li>
+ <li><a href="#">Site2</a></li>
+ <li><a href="#">Site3</a></li>
+ </ul>
+ </nav>
+ <aside> 
+ <h1>Validate input</h1>
+<form name="myForm" onsubmit="return validate()" method="post">
+ Name: <input type="text" name="fname">
+ <input type="submit" value="Submit" >
+</form>
+</aside> 
+ </section>
+<footer>
+ <p>This is Footer</p>
+</footer>
+</body>
+</html>
+
